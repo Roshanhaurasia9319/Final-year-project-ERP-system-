@@ -1,0 +1,80 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.split-left {
+    height: 100%;
+    background-color: #4a69bd;
+    color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-control {
+    border-radius: 25px;
+}
+
+.btn-custom {
+    border-radius: 25px;
+    background-color: #6c7ae0;
+    color: white;
+}
+
+.btn-custom:hover{
+    background-color: rgb(0, 255, 0);
+}
+
+.btn-custom-secondary {
+    border-radius: 25px;
+    background-color: #fff;
+    border: 2px solid #6c7ae0;
+    color: #6c7ae0;
+}
+
+.btn-custom-secondary:hover{
+    background-color: rgb(0, 255, 0);
+}
+
+.form-text {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.sign-up-link {
+    color: #f5f5f5;
+}
+
+.sign-up-link:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.split-right {
+    height: 100%;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.image-container {
+    max-width: 100%;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 80%;
+    height: auto;
+}
+
