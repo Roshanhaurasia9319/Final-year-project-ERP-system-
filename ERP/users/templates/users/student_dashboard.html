@@ -1,0 +1,133 @@
+{% extends "users/baseStudent.html" %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/css/student_dashboard.css' %}">
+{% endblock css %}
+
+{% block main %}
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-md-9 content">
+            <!-- Header Section -->
+            <div class="header">
+                <div class="user-info">
+                    <img src="{% static 'users/images/student1.avif' %}" alt="User Profile" class="profile-pic">
+                    <div>
+                        <span class="user-name">John Doe</span>
+                        <span class="user-status">3rd Year</span>
+                    </div>
+                </div>
+                <div class="header-content">
+                    <div class="date">September 4, 2023</div>
+                    <h2 class="welcome-message">Welcome back, John!</h2>
+                    <p>Always stay updated in your student portal</p>
+                </div>
+            </div>
+
+            <!-- Finance Section -->
+            <div class="row">
+                <div class="col-md-4 finance-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="{% static 'users/images/teacher1.avif' %}" alt="Money Stack" class="finance-icon">
+                            <h5 class="card-title">Finance</h5>
+                            <p class="card-text">
+                                <span class="amount">$10,000</span>
+                                <br>Total Payable
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 finance-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="{% static 'users/images/teacher2.avif' %}" alt="Money Bag" class="finance-icon">
+                            <h5 class="card-title">Finance</h5>
+                            <p class="card-text">
+                                <span class="amount">$5,000</span>
+                                <br>Total Paid
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 finance-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="{% static 'users/images/teacher3.jpg' %}" alt="Chart Bar" class="finance-icon">
+                            <h5 class="card-title">Finance</h5>
+                            <p class="card-text">
+                                <span class="amount">$300</span>
+                                <br>Others
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Courses Section -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card course-card">
+                        <div class="card-header">
+                            <h5 class="card-title">Enrolled Courses</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="card course-item">
+                                <div class="card-body">
+                                    <h5 class="card-title">Object Oriented Programming</h5>
+                                    <img src="{% static 'users/images/teacher1.avif' %}" alt="Laptop" class="course-icon">
+                                    <button class="btn btn-primary">View</button>
+                                </div>
+                            </div>
+                            <div class="card course-item">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fundamentals of Database Systems</h5>
+                                    <img src="{% static 'users/images/teacher2.avif' %}" alt="Database" class="course-icon">
+                                    <button class="btn btn-primary">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor and Notice Section -->
+                <div class="col-md-6">
+                    <div class="card instructor-card">
+                        <div class="card-header">
+                            <h5 class="card-title">Course Instructors</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="{% static 'users/images/teacher1.avif' %}" alt="Instructor 1" class="instructor-pic">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="{% static 'users/images/teacher2.avif' %}" alt="Instructor 2" class="instructor-pic">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="{% static 'users/images/teacher3.jpg' %}" alt="Instructor 3" class="instructor-pic">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card notice-card">
+                        <div class="card-header">
+                            <h5 class="card-title">Daily Notice</h5>
+                        </div>
+                        <div class="card-body">
+                            {% for n in Notice %}
+                            <p class="notice-content">{{ n.notificationMessage }}</p>
+                            <hr>
+                            {% endfor %}
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-link">See all</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

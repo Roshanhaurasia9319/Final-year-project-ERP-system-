@@ -1,0 +1,84 @@
+{% extends "users/baseTeacher.html" %}
+
+{% block css %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'users/css/markAttendance.css' %}">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+    
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            events: '/calendar-data/',  // This should point to your view returning JSON data
+            eventClick: function(info) {
+                alert(info.event.title + ": " + info.event.extendedProps.description);
+            }
+        });
+    
+        calendar.render();
+    });
+</script>
+{% endblock css %}
+
+{% block main %}
+<h2 class="text-center" style="margin-top: 65px;">Student Attendance</h2>
+<div class="container">
+    <form method="post" class="attendance-form">
+        {% csrf_token %}
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr id="row_{{ student.id }}">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.roll_number }}</td>
+                    <td>
+                        <button type="button" id="Present" class="btn btn-success btn-sm" onclick="markAttendance('{{ student.id }}', 'Present')">Present</button>
+                        <button type="button" id="Absent" class="btn btn-danger btn-sm" onclick="markAttendance('{{ student.id }}', 'Absent')">Absent</button>
+                        <input type="hidden" id="attendance_{{ student.id }}" name="attendance_{{ student.id }}" value="{{ student.attendance_status }}">
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary w-100">Submit Attendance</button>
+    </form>
+
+    <div id="calendar"></div>
+</div>
+{% endblock main %}
+
+{% block script %}
+<script>
+    function markAttendance(studentId, status) {
+        console.log("Marking attendance for Student ID:", studentId, "Status:", status);
+
+        // Update the hidden input value
+        document.getElementById('attendance_' + studentId).value = status;
+
+        // Get the row for the current student
+        var row = document.getElementById('row_' + studentId);
+
+        // Apply background color based on the attendance status
+        if (status === 'Present') {
+            row.classList.add('present-row');
+            row.classList.remove('absent-row');
+        } else if (status === 'Absent') {
+            row.classList.add('absent-row');
+            row.classList.remove('present-row');
+        }
+
+        console.log("Row updated:", row);
+    }
+</script>
+{% endblock script %}

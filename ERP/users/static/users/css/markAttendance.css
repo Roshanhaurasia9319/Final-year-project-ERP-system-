@@ -1,0 +1,93 @@
+/* Container for attendance form and calendar */
+
+h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(0, 255, 0);
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px auto;
+    position: relative;
+    left: 190px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.349);
+    width: 100%;
+    max-width: 1100px;
+}
+
+.attendance-form {
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+table {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.container button {
+    transition: transform 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #d4edda !important;
+    /* Light green */
+    color: black;
+    transform: translateY(-5px);
+}
+
+/* Define background colors for attendance status */
+.present-row #Present {
+    background-color: #d4edda !important;
+    /* Light green */
+    color: black;
+}
+
+.absent-row #Absent {
+    background-color: #f8d7da !important;
+    /* Light red */
+    color: black;
+}
+
+/* Calendar styling */
+#calendar {
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 60vh;
+    transform: scale(0.9);
+    width: 100%;
+    max-width: 400px;
+    margin-left: 20px;
+
+
+    font-size: small;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+        position: static;
+    }
+
+    #calendar {
+        width: 100%;
+        max-width: 100%;
+    }
+}

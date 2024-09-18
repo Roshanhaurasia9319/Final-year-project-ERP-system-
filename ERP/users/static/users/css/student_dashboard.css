@@ -1,0 +1,108 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.349);
+    width: 100%;
+    max-width: 1800px;
+}
+
+.content {
+    background-color: #f5f0ff;
+    padding: 20px;
+    border-radius: 15px; /* Optional for better card look */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-status {
+    color: #888;
+}
+
+.header-content {
+    text-align: right;
+}
+
+.date {
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.welcome-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Finance cards, courses, instructors, and notices */
+.finance-card, .course-card, .instructor-card, .notice-card {
+    margin-bottom: 20px;
+}
+
+.finance-icon, .course-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.course-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.instructor-pic {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.notice-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.notice-link:hover {
+    text-decoration: underline;
+}
+
+.content{
+    margin-left: 300px;
+}
+
+@media screen and (max-width: 900px) {
+    .content{
+        margin-left: 0%;
+    }
+}

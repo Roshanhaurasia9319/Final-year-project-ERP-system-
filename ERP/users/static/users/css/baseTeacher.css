@@ -1,0 +1,135 @@
+body {
+    overflow-x: hidden;
+    background: radial-gradient(at bottom, #45daffb6, #ffffff);
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+}
+
+#sidebar {
+    background-color: #ffffff6b;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 95%;
+    width: 250px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 1px 0px 20px 8px rgb(0 0 0 / 10%);
+    z-index: 1000;
+    border-radius: 20px;
+}
+
+#sidebar.active {
+    left: -250px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#sidebar ul li {
+    padding: 15px 20px;
+    transition: background 0.3s ease;
+}
+
+#sidebar ul li:hover {
+    background-color: #7bbbff;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    width: 100%;
+    transition: color 0.3s ease;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+}
+
+#content {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content.active {
+    margin-left: 0;
+}
+
+#toggle-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    #toggle-btn {
+        display: block;
+    }
+
+    #sidebar {
+        left: -250px;
+    }
+
+    #sidebar.active {
+        left: 0;
+    }
+
+    #content {
+        margin-left: 0;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #content.active {
+        margin-left: 250px;
+    }
+}
+
+/* Custom styles for the footer if needed */
+/* footer{
+    position: relative;
+    width: 100%;
+    max-width: 77vw;
+    border-radius: 20px;
+    
+    left: 280px;
+}
+.footer a {
+    text-decoration: none;
+   
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    footer{
+        left: 0;
+    }
+} */
+
+
+

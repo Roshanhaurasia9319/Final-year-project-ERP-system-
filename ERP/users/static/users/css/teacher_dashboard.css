@@ -1,223 +1,114 @@
+@media (max-width: 576px) {
+    #content {
+        padding: 15px;
+    }
 
-        body {
-            overflow-x: hidden;
-            background: radial-gradient(at bottom, #45daffb6, #ffffff);
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-        }
+    .teacher-class {
+        width: 100%;
+    }
 
-        #sidebar {
-            background-color: #ffffff6b;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 250px;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            border-radius: 20px;
-        }
+    .firstclass {
+        width: 100%;
+    }
 
-        #sidebar.active {
-            left: -250px;
-        }
+    .heading1 button {
+        width: 100px;
+        padding: 8px;
+    }
 
-        #sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
+    .heading2 img {
+        margin-right: 5px;
+    }
+}
 
-        #sidebar ul li {
-            padding: 15px 20px;
-            transition: background 0.3s ease;
-        }
+.teacher-class {
+    position: relative;
+    left: 120px;
+    margin: 20px auto;
+    height: fit-content;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
 
-        #sidebar ul li:hover {
-            background-color: #7bbbff;
-        }
+.teacher-class:hover {
+    transform: translateY(-10px);
+}
 
-        #sidebar ul li a {
-            text-decoration: none;
-            color: #333;
-            display: block;
-            width: 100%;
-            transition: color 0.3s ease;
-        }
+.heading1 h1 {
+    font-size: 2rem;
+    color: black;
+}
 
-        #sidebar ul li a:hover {
-            color: #fff;
-        }
+.heading1 button {
+    border-style: none;
+    border-radius: 20px;
+    width: 120px;
+    background-color: rgb(4, 255, 4);
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
 
-        #content {
-            margin-left: 250px;
-            transition: margin-left 0.3s ease;
-            padding: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.heading1 button:hover {
+    background-color: rgb(0, 200, 0);
+}
 
-        #content.active {
-            margin-left: 0;
-        }
+.heading2 img {
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
-        #toggle-btn {
-            display: none;
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            z-index: 1001;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
+.heading2 img:hover {
+    transform: scale(1.2);
+}
 
-        #toggle-btn:hover {
-            background-color: #0056b3;
-        }
+hr {
+    border: 1px solid #77b9ff;
+}
 
-        @media (max-width: 768px) {
-            #toggle-btn {
-                display: block;
-            }
+.firstclass {
+    height: fit-content;
+    width: 50vw;
+    background-color: #77b9ff3f;
+    border-radius: 20px;
+    margin: 5px;
+}
 
-            #sidebar {
-                left: -250px;
-            }
+.mark-attendance {
+    margin: 20px auto;
+    height: 20vh;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    left: 120px;
+}
 
-            #sidebar.active {
-                left: 0;
-            }
+.mark-attendance .boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-            #content {
-                margin-left: 0;
-                padding: 20px;
-                flex-direction: column;
-                align-items: flex-start;
-            }
+.mark-attendance .boxes .box {
+    height: 5vh;
+    width: 2;
+    border: 2px solid rgb(3, 247, 255);
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+}
 
-            #content.active {
-                margin-left: 250px;
-            }
-
-            .teacher-class {
-                width: 100%;
-            }
-
-            .firstclass {
-                width: 90%;
-            }
-        }
-
-        @media (max-width: 576px) {
-            #content {
-                padding: 15px;
-            }
-
-            .teacher-class {
-                width: 100%;
-            }
-
-            .firstclass {
-                width: 100%;
-            }
-
-            .heading1 button {
-                width: 100px;
-                padding: 8px;
-            }
-
-            .heading2 img {
-                margin-right: 5px;
-            }
-        }
-
-        .teacher-class {
-            margin: 20px auto;
-            height: fit-content;
-            width: 70vw;
-            max-width: 800px;
-            border-radius: 15px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .teacher-class:hover {
-            transform: translateY(-10px);
-        }
-
-        .heading1 h1 {
-            font-size: 2rem;
-            color: black;
-        }
-
-        .heading1 button {
-            border-style: none;
-            border-radius: 20px;
-            width: 120px;
-            background-color: rgb(4, 255, 4);
-            padding: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .heading1 button:hover {
-            background-color: rgb(0, 200, 0);
-        }
-
-        .heading2 img {
-            margin-right: 10px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .heading2 img:hover {
-            transform: scale(1.2);
-        }
-
-        hr {
-            border: 1px solid #77b9ff;
-        }
-
-        .firstclass {
-            height: fit-content;
-            width: 56vw;
-            background-color: #77b9ff3f;
-            border-radius: 20px;
-            margin: 5px;
-        }
-        .mark-attendance{
-            margin: 20px auto;
-            height: 20vh;
-            width: 40vw;
-            max-width: 800px;
-            border-radius: 15px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .mark-attendance .boxes{
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-        }
-        .mark-attendance .boxes .box{
-            height: 5vh;
-            width: 2;
-            border: 2px solid rgb(3, 247, 255);
-            text-align: center;
-            padding: 5px;
-            border-radius: 10px;
-            color: black;
-        }
-        .calendar-container {
-            /* margin: 20px auto;
+.calendar-container {
+    /* margin: 20px auto;
             height: fit-content;
             width: 70vw;
             max-width: 900px;
@@ -226,36 +117,139 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             padding: 20px; */
-            margin: 20px auto;
-            height: 70vh;
-            overflow: scroll;
-            width: 70vw;
-            max-width: 800px;
-            border-radius: 15px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+    margin: 20px auto;
+    height: 70vh;
+    overflow: scroll;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    left: 120px;
+}
 
-        .calendar-container:hover {
-            transform: translateY(-10px);
-        }
+.calendar-container:hover {
+    transform: translateY(-10px);
+}
 
-        #calendar {
-            max-width: 100%;
-            margin: 0 auto;
-        }
-        @media (max-width: 768px) {
-            .calendar-container{
-            margin: 20px auto;
-            height: fit-content;
-            width: 70vw;
-            overflow: visible;
-            max-width: 900px;
-            border-radius: 15px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            padding: 20px;
-            }
-        }
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.postNotification {
+    position: relative;
+    left: 120px;
+    margin: 20px auto;
+   
+    text-align: center;
+    height: 70vh;
+    min-height: 30vh;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+
+@media (max-width: 768px) {
+
+    .calendar-container {
+        margin: 20px auto;
+        height: fit-content;
+        width: 70vw;
+        overflow: visible;
+        max-width: 900px;
+        border-radius: 15px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        padding: 20px;
+    }
+}
+
+/* Media query for extra small devices (phones) */
+@media (max-width: 576px) {
+    #content {
+        padding: 15px;
+    }
+
+    .teacher-class, .postNotification,
+    .mark-attendance,
+    .calendar-container {
+        margin: 10px auto;
+        width: calc(100% - 20px);
+        /* Ensure proper spacing from edges */
+        left: 0;
+        /* Reset left positioning */
+    }
+
+    .teacher-class,
+    .mark-attendance {
+        max-width: none;
+        /* Remove max-width restriction */
+    }
+
+    .heading1 button {
+        width: 100px;
+        padding: 8px;
+    }
+
+    .heading2 img {
+        margin-right: 5px;
+    }
+
+    .firstclass {
+        width: 100%;
+        margin: 5px 0;
+        /* Adjust margin for smaller screens */
+    }
+}
+
+/* Media query for small to medium devices (tablets) */
+@media (max-width: 768px) {
+
+    .teacher-class,
+    .mark-attendance,
+    .calendar-container {
+        margin: 15px auto;
+        width: calc(100% - 30px);
+        /* Adjust width for padding */
+        left: 0;
+        /* Reset left positioning */
+    }
+
+    .teacher-class,
+    .mark-attendance {
+        max-width: none;
+        /* Remove max-width restriction */
+    }
+
+    .calendar-container {
+        height: fit-content;
+        width: 90vw;
+        /* Ensure proper width on tablets */
+    }
+}
+
+/* Media query for medium to large devices (desktops) */
+@media (max-width: 992px) {
+
+    .teacher-class,
+    .mark-attendance,
+    .calendar-container {
+        width: calc(100% - 40px);
+        /* Adjust width for padding and margins */
+    }
+
+    .teacher-class,
+    .mark-attendance {
+        max-width: 100%;
+        /* Remove max-width restriction for better adaptability */
+    }
+}
